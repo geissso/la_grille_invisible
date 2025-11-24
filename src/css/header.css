@@ -1,0 +1,134 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: linear-gradient(135deg, #b896d1 0%, #9b7bb5 100%);
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    min-height: 80px;
+}
+
+/* Logo à gauche */
+.logo-link {
+    display: flex;
+    align-items: center;
+    z-index: 10;
+}
+
+.logo-link img {
+    width: 80px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo-link:hover img {
+    transform: scale(1.05);
+}
+
+/* Section droite (langue + menu) */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    z-index: 10;
+}
+
+/* Langue */
+.lang-link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 12px;
+    transition: opacity 0.3s ease;
+}
+
+.lang-link:hover {
+    opacity: 0.8;
+}
+
+/* Burger menu */
+.burger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 32px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.burger-line {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.burger-menu:hover .burger-line {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive pour iPhone 15 (393px × 852px) */
+@media screen and (max-width: 430px) {
+    header {
+        padding: 16px 20px;
+        min-height: 70px;
+    }
+
+    .logo-link img {
+        width: 70px;
+    }
+
+    .lang-link {
+        font-size: 16px;
+        padding: 6px 10px;
+    }
+
+    .burger-menu {
+        width: 28px;
+        height: 22px;
+    }
+
+    .burger-line {
+        height: 2.5px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    header {
+        padding: 14px 16px;
+    }
+
+    .logo-link img {
+        width: 65px;
+    }
+
+    .header-right {
+        gap: 12px;
+    }
+
+    .lang-link {
+        font-size: 15px;
+    }
+
+    .burger-menu {
+        width: 26px;
+        height: 20px;
+    }
+}

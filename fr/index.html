@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LA GRILLE INVISIBLE</title>
+
+  <link rel="stylesheet" href="/src/style.css">
+  <link rel="stylesheet" href="/src/css/header.css">
+  <link rel="stylesheet" href="/src/css/menu.css">
+  <link href="https://fonts.googleapis.com/css2?family=Oi&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Oi&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <!-- Logo cliquable -->
+    <a href="/fr/" class="logo-link">
+      <img src="/assets/icones/LOGO.svg" alt="Logo">
+    </a>
+
+    <div class="header-right">
+      <a href="/en/" class="lang-link">EN</a>
+
+      <script type="module" src="/src/js/menu.js"></script>
+      <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav">
+        <img src="/assets/icones/menu.svg" alt="Menu-icone">
+      </button>
+
+      <nav class="header__menu menu" id="mainNav" aria-hidden="true">
+        <ul class="menu__list list-unstyled">
+          <li class="menu__item">
+            <a class="menu__link" href="/fr/a_propos.html">A propos</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="/fr/effet_matilda.html">Effet Matilda</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="/fr/diane_holl.html">Diane Holl</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="/fr/f1_academy.html">F1 Academy</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="/fr/stereotype.html">Stéréotypes & Médias</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="/fr/theorie.html">Une théorie</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="/fr/films_series.html">Films/ Séries</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="/fr/contacter.html">Nous Contacter</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="/fr/glossaire.html">Glossaire</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="/fr/autres_projets.html">Autres Projets</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+ 
+
+  <section class="hero">
+    <img src="/assets/img/home_back.webp" alt="Effet Matilda" class="hero-image">
+    <div class="hero-banner">
+      <h1>L'EFFET MATILDA</h1>
+    </div>
+  </section>
+
+    <section class="matilda-card">
+        <div class="matilda-card__inner">
+            <div class="matilda-card__content">
+                <p class="matilda-card__paragraph">
+                    <strong>L’effet Matilda</strong> désigne un phénomène bien réel : les découvertes
+                    faites par des femmes sont souvent attribuées à leurs collègues masculins.
+                    Le terme vient de Matilda Joslyn Gage, une féministe américaine du XIX<sup>e</sup> siècle,
+                    qui dénonçait déjà cette invisibilisation.
+                </p>
+
+                <p class="matilda-card__paragraph">
+                    De Rosalind Franklin, éclipsée dans la découverte de l’ADN, à
+                    <strong>Jocelyn Bell Burnell</strong>, privée du Nobel pour la découverte des pulsars,
+                    de nombreuses scientifiques ont vu leur travail minimisé ou effacé.
+                </p>
+            </div>
+
+            <a href="#" class="matilda-card__button">EN SAVOIR PLUS</a>
+        </div>
+    </section>
+
+    <section class="stats-combien">
+        <div class="stats-combien__inner">
+            <div class="stats-combien__header">
+                <div class="stats-combien__header-label">
+                    COMBIEN ?
+                </div>
+            </div>
+
+            <div class="stats-combien__body">
+                <div class="stats-combien__body-top-line"></div>
+
+               <div class="stats-combien__stats">
+                    <article class="stats-combien__stat">
+                        <span class="stats-combien__value">1%</span>
+                        <p class="stats-combien__caption">
+                            Femmes Dans Le Sport Automobile
+                        </p>
+                    </article>
+
+                    <article class="stats-combien__stat stats-combien__stat--right">
+                        <span class="stats-combien__value">150</span>
+                        <p class="stats-combien__caption">
+                            Femmes Dans Le Sport Automobile
+                        </p>
+                    </article>
+                </div>
+
+
+                <div class="stats-combien__footer">
+                    <div class="stats-combien__footer-line"></div>
+                    <button class="stats-combien__button" type="button">
+                        <span class="stats-combien__button-label">PLUS D’INFO</span>
+                        <span class="stats-combien__button-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="who">
+  <!-- SECTION QUI SONT-ELLES ? -->
+<section class="drivers" id="drivers">
+  <header class="drivers__header">
+    <h2 class="drivers__title">QUI SONT-ELLES&nbsp;?</h2>
+  </header>
+
+  <!-- Carousel de cartes -->
+  <div class="drivers__carousel">
+    <div class="drivers__cards">
+      <!-- Carte 1 -->
+      <article class="driver-card active" data-driver="doriane">
+        <div class="driver-card__image" style="background-image:url('/assets/img/pilotes/doriane-pin.webp');"></div>
+        <div class="driver-card__overlay"></div>
+        <h3 class="driver-card__name">DORIANE PIN</h3>
+      </article>
+
+      <!-- Carte 2 -->
+      <article class="driver-card" data-driver="maya">
+        <div class="driver-card__image" style="background-image:url('/assets/img/pilotes/maya-weug.webp');"></div>
+        <div class="driver-card__overlay"></div>
+        <h3 class="driver-card__name">MAYA WEUG</h3>
+      </article>
+
+      <!-- Carte 3 -->
+      <article class="driver-card" data-driver="lena">
+        <div class="driver-card__image" style="background-image:url('/assets/img/pilotes/lena-buhler.webp');"></div>
+        <div class="driver-card__overlay"></div>
+        <h3 class="driver-card__name">LENA BÜHLER</h3>
+      </article>
+    </div>
+  </div>
+
+  <!-- Texte associé à la pilote sélectionnée -->
+  <div class="drivers__details">
+    <p class="driver-detail active" data-driver="doriane">
+      Longtemps considéré comme un milieu exclusivement masculin, le sport automobile
+      s’ouvre peu à peu aux femmes, bien que leur place y reste encore fragile. De la
+      direction technique aux stands, en passant par le pilotage et l’ingénierie, elles
+      sont de plus en plus nombreuses à tracer leur voie. Doriane Pin incarne cette
+      nouvelle génération ambitieuse.
+    </p>
+
+    <p class="driver-detail" data-driver="maya">
+      Maya Weug est l’une des premières femmes intégrées à la Ferrari Driver Academy.
+      Son parcours témoigne d’un changement progressif dans les programmes de formation
+      des grandes équipes, encore largement dominés par les hommes.
+    </p>
+
+    <p class="driver-detail" data-driver="lena">
+      Pilote suisse engagée dans les formules de promotion, Lena Bühler montre que la
+      persévérance et le talent permettent peu à peu de faire bouger les lignes, malgré
+      les obstacles structurels qui persistent.
+    </p>
+  </div>
+
+  <!-- Flèche vers la suite de la page -->
+  <button class="drivers__scroll-down" type="button" aria-label="Descendre">
+    <span class="drivers__scroll-down-icon"></span>
+  </button>
+</section>
+
+
+</body>
+</html>

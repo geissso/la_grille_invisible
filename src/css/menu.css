@@ -1,0 +1,82 @@
+
+.menu {
+  position: fixed;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;    /* centre verticalement la liste */
+  align-items: center;        /* centre horizontalement */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  transition: all 0.4s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 2;                 /* sous le bouton mais au-dessus du contenu */
+}
+
+/* Quand aria-hidden="false", on l’affiche */
+.menu[aria-hidden="false"] {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Empêche de scroller quand le menu est ouvert */
+.noscroll {
+  overflow: hidden;
+}
+
+/* Bouton burger */
+.menu-btn {
+  position: relative;
+  z-index: 3;                 /* au-dessus du menu */
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+/* Option : rotation du bouton quand le menu est ouvert */
+.menu-btn[aria-expanded="true"] {
+  transform: rotate(90deg);
+}
+
+/* Image à l’intérieur du bouton */
+.menu-btn img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Liste du menu */
+.menu__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.menu__item + .menu__item {
+  margin-top: 18px;
+}
+
+.menu__link {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #2F2A44;
+}
+
+/* Hover simple */
+.menu__link:hover {
+  opacity: 0.7;
+}
+
+/* Tu peux ensuite adapter avec des media queries pour l’affichage desktop */

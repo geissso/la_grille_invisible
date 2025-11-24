@@ -1,0 +1,458 @@
+.hero {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.hero-banner {
+    position: absolute;
+    display: inline-block;
+    transform: translateX(-50%);
+    left: 50%;
+    background-color: white;
+    border-radius: 30px 30px 0 0;
+    padding: 12px 40px;
+}
+
+.hero-banner h1 {
+    font-family: 'Oi', cursive;
+    font-size: 22px;
+    font-weight: 400;
+    color: #2F2A44;
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* Responsive pour iPhone 15 */
+@media screen and (max-width: 430px) {
+    .hero-banner {
+        padding: 12px 110px 12px 110px;
+        border-radius: 70px 70px 0 0;
+        min-width: 260px;
+    }
+
+    .hero-banner h1 {
+        white-space: nowrap;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .hero-banner {
+        padding: 16px 40px 14px 40px;
+        border-radius: 26px 26px 0 0;
+        min-width: 240px;
+    }
+
+    .hero-banner h1 {
+        font-size: 18px;
+    }
+}
+
+.matilda-card__paragraph {
+    font-family: 'Montserrat', sans-serif;
+    align-items: center;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #2F2A44;
+    margin: 25px 20px 20px 25px;
+    text-align: left;
+}
+
+.matilda-card__button {
+    display: inline-block;
+    text-align: center;
+    background-color: #2F2A44;
+    color: #EBE2F3;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 14px 32px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+    margin-top: 15px;
+}
+
+.matilda-card__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-primary:hover {
+    background-color: #3d3554;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(47, 42, 68, 0.3);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/* Responsive iPhone 15 */
+@media screen and (max-width: 430px) {
+    .intro {
+        padding: 36px 20px 46px 20px;
+    }
+
+    .intro-text {
+        font-size: 13px;
+        line-height: 1.6;
+        margin-bottom: 18px;
+    }
+
+    .intro-text:last-of-type {
+        margin-bottom: 30px;
+    }
+
+    .btn-primary {
+        padding: 13px 30px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .intro {
+        padding: 32px 18px 42px 18px;
+    }
+
+    .intro-text {
+        font-size: 12px;
+        margin-bottom: 16px;
+    }
+
+    .intro-text:last-of-type {
+        margin-bottom: 28px;
+    }
+
+    .btn-primary {
+        padding: 12px 28px;
+        font-size: 11px;
+    }
+}
+
+/* === BLOC COMBIEN – STATS === */
+
+.stats-combien {
+    width: 100%;
+    /* height: 411px;  SUPPRIMÉ pour laisser la hauteur s'adapter au contenu */
+    margin: 10px auto;
+    box-sizing: border-box;
+}
+
+.stats-combien__inner {
+    width: 100%;
+    /* height: 100%;  pas nécessaire sans hauteur fixe */
+    box-sizing: border-box;
+    position: relative;
+    /* overflow: hidden;  SUPPRIMÉ pour que le bouton ne soit pas coupé */
+}
+
+/* Bandeau haut + cartouche arrondi */
+
+.stats-combien__header {
+    position: relative;
+    height: 110px;
+}
+
+.stats-combien__header-label {
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 245px;
+    height: 61px;
+    background-color: #c9a7e4;
+    border-radius: 0 90px 0 0;
+    display: flex;
+    padding-left: 5px;
+    padding-top: 15px;
+    box-sizing: border-box;
+    font-family: "Oi", cursive;
+    font-size: 24px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+/* Corps violet */
+
+.stats-combien__body {
+    position: relative;
+    background-color: #c9a7e4;
+    box-sizing: border-box;
+    padding: 80px 55px 70px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Zones de stats */
+
+.stats-combien__stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 80px;
+}
+
+.stats-combien__stat {
+    text-align: center;
+    flex: 0 0 45%;
+    font-family: "Montserrat", sans-serif;
+    color: #ffffff;
+}
+
+.stats-combien__value {
+    display: inline-block;
+    font-family: Libre Caslon Text, serif;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 1;
+    padding: 0 4px 6px;
+    margin-bottom: 15px;
+}
+
+.stats-combien__caption {
+    display: block;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.stats-combien__footer {
+    text-align: center;
+    margin-top: auto;
+}
+
+.stats-combien__footer-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+/* Bouton "PLUS D'INFO" */
+
+.stats-combien__button {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: -22px 10px 0;
+    padding: 12px 40px 18px;
+    background-color: #c9a7e4;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    outline: none;
+    
+}
+
+.stats-combien__button-label {
+    pointer-events: none;
+}
+
+/* chevron vers le bas (exemple simple) */
+.stats-combien__button-icon {
+    width: 10px;
+    height: 10px;
+    margin-top: 6px;
+    border-right: 2px solid #111111;
+    border-bottom: 2px solid #111111;
+    transform: rotate(45deg);
+    pointer-events: none;
+}
+
+/* petit hover discret */
+
+.stats-combien__button:hover {
+    background-color: #d7b6f1;
+}
+
+/* ===== SECTION QUI SONT-ELLES ? ===== */
+
+.drivers {
+  width: 100%;
+  max-width: 480px;
+  margin: 40px auto 70px;
+  padding: 0 24px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Titre + déco violette en haut à droite */
+.drivers__header {
+  position: relative;
+  margin-bottom: 28px;
+}
+
+.drivers__title {
+  font-family: "Oi", cursive;
+  font-size: 26px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: #2F2A44;
+  text-align: left;
+}
+
+.drivers__header::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 55%;
+  width: 120px;
+  height: 40px;
+  border-top: 4px solid #D6B5F3;
+  border-right: 4px solid #D6B5F3;
+  border-radius: 0 40px 0 0;
+}
+
+/* ===== CARDS / CAROUSEL ===== */
+
+.drivers__carousel {
+  margin-bottom: 26px;
+  display: flex;
+  justify-content: center;
+}
+
+.drivers__cards {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  height: 190px;
+}
+
+/* Carte de base */
+.driver-card {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  border-radius: 28px;
+  overflow: hidden;
+  cursor: pointer;
+  transform: scale(0.9) translateX(0);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, opacity 0.35s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  opacity: 0.3;
+}
+
+/* Positionner les cartes arrière légèrement décalées */
+.driver-card[data-driver="doriane"] {
+  z-index: 2;
+}
+
+.driver-card[data-driver="maya"] {
+  transform: scale(0.85) translateX(40px);
+  z-index: 1;
+}
+
+.driver-card[data-driver="lena"] {
+  transform: scale(0.85) translateX(-40px);
+  z-index: 1;
+}
+
+/* Carte active au centre, comme dans ta maquette */
+.driver-card.active {
+  transform: scale(1) translateX(0);
+  z-index: 3;
+  opacity: 1;
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.35);
+}
+
+/* Image en fond */
+.driver-card__image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Voile violet */
+.driver-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(47, 42, 68, 0.1),
+    rgba(47, 42, 68, 0.85)
+  );
+}
+
+/* Nom */
+.driver-card__name {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  margin: 0;
+  padding: 8px 20px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+/* ===== TEXTE ASSOCIÉ ===== */
+
+.drivers__details {
+  margin: 10px 4px 24px;
+}
+
+.driver-detail {
+  display: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #4B4760;
+  text-align: left;
+}
+
+.driver-detail.active {
+  display: block;
+}
+
+/* ===== FLÈCHE ===== */
+
+.drivers__scroll-down {
+  border: none;
+  background: transparent;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.drivers__scroll-down-icon {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-left: 2px solid #2F2A44;
+  border-bottom: 2px solid #2F2A44;
+  transform: rotate(-45deg);
+}
+
+/* Petit ajustement mobile */
+@media (max-width: 430px) {
+  .drivers {
+    padding: 0 18px;
+  }
+  .drivers__title {
+    font-size: 24px;
+  }
+}
