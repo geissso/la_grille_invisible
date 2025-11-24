@@ -1,3 +1,7 @@
+@import url("/src/css/card_carousel.css");
+@import url("/src/css/header.css");
+@import url("/src/css/menu.css");
+
 .hero {
     position: relative;
     width: 100%;
@@ -148,6 +152,7 @@
 
 .stats-combien {
     width: 100%;
+    z-index: 1;
     /* height: 411px;  SUPPRIMÉ pour laisser la hauteur s'adapter au contenu */
     margin: 10px auto;
     box-sizing: border-box;
@@ -286,7 +291,42 @@
 }
 
 /* ===== SECTION QUI SONT-ELLES ? ===== */
+.who__inner {
+    width: 100%;
+    
+    box-sizing: border-box;
+    position: relative;
+    /
+}
 
+/* Bandeau haut + cartouche arrondi */
+.who {
+  position: relative;
+  z-index: 10;
+   margin-top: -71px; 
+}
+.who__header {
+    position: relative;
+    height: 110px;
+}
+.who__header-label {
+    position: relative;
+    left: 0;
+    bottom: -2px;
+    width: 390px;
+    height: 61px;
+    background-color: #ffffff;
+    border-radius: 0 90px 0 0;
+    display: flex;
+    padding-left: 5px;
+    padding-top: 15px;
+    box-sizing: border-box;
+    font-family: "Oi", cursive;
+    font-size: 24px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #2F2A44;
+}
 .drivers {
   width: 100%;
   max-width: 480px;
