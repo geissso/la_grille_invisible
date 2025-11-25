@@ -497,3 +497,36 @@
     font-size: 24px;
   }
 }
+.who__footer {
+    max-width: 680px;
+    margin: 26px auto 48px;
+    padding: 0 24px;
+    text-align: center;
+}
+
+.who__description {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #4B4760;
+    background: linear-gradient(180deg, #4B4760 0%, #4B4760 60%, rgba(75, 71, 96, 0.28) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.who__arrow-bottom {
+    margin-top: 20px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.who__arrow-bottom img {
+    width: 22px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}

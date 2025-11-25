@@ -5,7 +5,7 @@
 
 .carousel__container {
   display: flex;
-  gap: 16px;
+  gap: 50px;
   overflow-x: auto;          /* c’est CE conteneur qui scrolle */
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;   /* bonus : smooth au clavier/souris */
@@ -21,6 +21,19 @@
 
 .carousel__item img {
   display: block;
-  width: 100%;
+  width: 120%;
   height: auto;
 }
+
+.carousel__controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  padding: 16px 16px;
+  pointer-events: none;     
+}
+
