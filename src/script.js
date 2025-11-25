@@ -2,17 +2,33 @@ document.addEventListener("DOMContentLoaded", () => {
   // Menu (inchangé)
   const toggle = document.querySelector(".menu-btn");
   const nav = document.querySelector(".menu");
+   const setMenuState = (shouldOpen) => {
+    if (!toggle || !nav) return;
+    nav.setAttribute("aria-hidden", String(!shouldOpen));
+    toggle.setAttribute("aria-expanded", String(shouldOpen));
+    document.body.classList.toggle("noscroll", shouldOpen);
+  };
   if (toggle && nav) {
     toggle.addEventListener("click", () => {
       const isOpen = toggle.getAttribute("aria-expanded") === "true";
-      nav.setAttribute("aria-hidden", String(isOpen));
-      toggle.setAttribute("aria-expanded", String(!isOpen));
-      document.body.classList.toggle("noscroll");
+      setMenuState(!isOpen);
+    });
+
+    nav.addEventListener("click", (event) => {
+      if (event.target.closest("a")) {
+        setMenuState(false);
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        setMenuState(false);
+      }
     });
   }
 
   // --- CAROUSEL ---
-  const carousel   = document.querySelector(".carousel__container");
+  const carousel = document.querySelector(".carousel__container");
   const prevButton = document.querySelector(".carousel__button--prev");
   const nextButton = document.querySelector(".carousel__button--next");
 
@@ -21,14 +37,29 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  // largeur dynamique d’un item
-  const firstItem = carousel.querySelector(".carousel__item") || carousel.firstElementChild;
-  let scrollAmount = firstItem ? firstItem.clientWidth : 260;
+   const computeScrollAmount = () => {
+    const reference = carousel.querySelector(".carousel__item") || carousel.firstElementChild;
+    if (!reference) return 0;
+
+    const itemWidth = reference.getBoundingClientRect().width;
+    const styles = window.getComputedStyle(carousel);
+    const gap = parseInt(styles.columnGap || styles.gap || "0", 10);
+
+    return itemWidth + gap;
+  };
+
+  let scrollAmount = computeScrollAmount();
+
+  const updateButtons = () => {
+    const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+    prevButton.disabled = carousel.scrollLeft <= 0;
+    nextButton.disabled = carousel.scrollLeft >= maxScroll - 1;
+  };
 
   // recalcule au resize (responsif)
   window.addEventListener("resize", () => {
-    const ref = carousel.querySelector(".carousel__item") || carousel.firstElementChild;
-    if (ref) scrollAmount = ref.clientWidth;
+    scrollAmount = computeScrollAmount();
+    updateButtons();
   });
 
   // clics
@@ -39,4 +70,6 @@ document.addEventListener("DOMContentLoaded", () => {
   nextButton.addEventListener("click", () => {
     carousel.scrollBy({ left: +scrollAmount, behavior: "smooth" });
   });
+  carousel.addEventListener("scroll", updateButtons, { passive: true });
+  updateButtons();
 });
