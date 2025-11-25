@@ -8,6 +8,7 @@
   <title>LA GRILLE INVISIBLE</title>
 
   <link rel="stylesheet" href="/src/style.css">
+  <script src="/src/script.js" defer></script>
   <link href="https://fonts.googleapis.com/css2?family=Oi&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Oi&display=swap" rel="stylesheet">
 </head>
@@ -89,7 +90,7 @@
                 </p>
             </div>
 
-            <a href="#" class="matilda-card__button">EN SAVOIR PLUS</a>
+            <a href="/fr/effet_matilda.html" class="matilda-card__button">EN SAVOIR PLUS</a>
         </div>
     </section>
 
@@ -134,12 +135,37 @@
     
     <section class="who">
   <div class="who__inner">
-            <div class="who__header">
-                <div class="who__header-label">
-                    QUI SONT-ELLES?
-                </div>
-            </div>
+    <div class="who__header">
+      <div class="who__header-label">
+        QUI SONT-ELLES?
+      </div>
+    </div>
+
+    <div class="carousel" aria-labelledby="carousel-heading">
+      <div class="carousel__container" role="region" aria-live="polite">
+        <div class="carousel__item">
+          <img src="/assets/img/carrousel_1.webp" alt="Doriane pin" />
+        </div>
+        <div class="carousel__item">
+          <img src="/assets/img/carrousel_2.webp" alt="Michelle Mouton" />
+        </div>
+        <div class="carousel__item">
+          <img src="/assets/img/carrousel_3.webp" alt="Jamie Chadwick" />
+        </div>
+      </div>
+
+      <div class="carousel__controls">
+        <button class="carousel__button carousel__button--prev" aria-label="Défiler vers la gauche">
+          <img src="/assets/icones/icon_arrowcarrousel.svg" alt="fleche gauche" />
+        </button>
+        <button class="carousel__button carousel__button--next" aria-label="Défiler vers la droite">
+          <img src="/assets/icones/icon_arrowcarrousel.svg" alt="fleche droite" />
+        </button>
+      </div>
+    </div>
+  </div>
 </section>
+
 
 
 </body>

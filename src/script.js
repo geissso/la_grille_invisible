@@ -1,50 +1,42 @@
+document.addEventListener("DOMContentLoaded", () => {
+  // Menu (inchangé)
+  const toggle = document.querySelector(".menu-btn");
+  const nav = document.querySelector(".menu");
+  if (toggle && nav) {
+    toggle.addEventListener("click", () => {
+      const isOpen = toggle.getAttribute("aria-expanded") === "true";
+      nav.setAttribute("aria-hidden", String(isOpen));
+      toggle.setAttribute("aria-expanded", String(!isOpen));
+      document.body.classList.toggle("noscroll");
+    });
+  }
 
-const toggle = document.querySelector(".menu-btn");
-const nav = document.querySelector(".menu");
+  // --- CAROUSEL ---
+  const carousel   = document.querySelector(".carousel__container");
+  const prevButton = document.querySelector(".carousel__button--prev");
+  const nextButton = document.querySelector(".carousel__button--next");
 
-if (toggle && nav) {
-  toggle.addEventListener("click", () => {
-    const isOpen = toggle.getAttribute("aria-expanded") === "true";
-    const isClosed = !isOpen;
+  if (!carousel || !prevButton || !nextButton) {
+    console.warn("[carousel] éléments introuvables");
+    return;
+  }
 
-    // inverse les états ARIA
-    nav.setAttribute("aria-hidden", String(isOpen));
-    toggle.setAttribute("aria-expanded", String(isClosed));
+  // largeur dynamique d’un item
+  const firstItem = carousel.querySelector(".carousel__item") || carousel.firstElementChild;
+  let scrollAmount = firstItem ? firstItem.clientWidth : 260;
 
-    // bloque / débloque le scroll
-    document.body.classList.toggle("noscroll");
-
-    console.log("isOpen : ", isOpen, "isClosed : ", isClosed);
-  });
-} else {
-  console.warn("Menu : impossible de trouver .menu-btn ou .menu");
-}
-
-// CAROUSEL QUI SONT-ELLES ? //
-
-function changeDriver(name) {
-  const cards = document.querySelectorAll(".driver-card");
-  const details = document.querySelectorAll(".driver-detail");
-
-  // activer la bonne carte
-  cards.forEach(card => {
-    if (card.dataset.driver === name) {
-      card.classList.add("active");
-    } else {
-      card.classList.remove("active");
-    }
+  // recalcule au resize (responsif)
+  window.addEventListener("resize", () => {
+    const ref = carousel.querySelector(".carousel__item") || carousel.firstElementChild;
+    if (ref) scrollAmount = ref.clientWidth;
   });
 
-  // activer le bon texte
-  details.forEach(detail => {
-    if (detail.dataset.driver === name) {
-      detail.classList.add("active");
-    } else {
-      detail.classList.remove("active");
-    }
+  // clics
+  prevButton.addEventListener("click", () => {
+    carousel.scrollBy({ left: -scrollAmount, behavior: "smooth" });
   });
-}
 
-
-
-
+  nextButton.addEventListener("click", () => {
+    carousel.scrollBy({ left: +scrollAmount, behavior: "smooth" });
+  });
+});
