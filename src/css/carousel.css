@@ -37,3 +37,10 @@
   pointer-events: none;     
 }
 
+.carousel__button {
+  pointer-events: auto;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
