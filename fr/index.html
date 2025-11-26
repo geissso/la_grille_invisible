@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="fr">
-<!DOCTYPE html>
-<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -174,56 +172,127 @@
   </div>
 </section>
 <section class="articles">
-    <div class="articles__inner">
-      <div class="articles__header">
-        <div class="articles__header-label">Nos articles</div>
-      </div>
+  <div class="articles__inner">
+    <div class="articles__header">
+      <div class="articles__header-label">Nos articles</div>
+    </div>
 
-      <div class="articles__body">
-        <div class="articles__body-top-line"></div>
+    <div class="articles__body">
+      <div class="articles__body-top-line"></div>
 
-        <div class="articles__list">
-          <article class="article-card">
-            <div class="article-card__media">
-              <img src="/assets/img/dianeholl_article1.webp" alt="Diane Holl, ingénieure dans le sport automobile" />
-              <div class="article-card__overlay"></div>
-              <div class="article-card__content">
-                <h3 class="article-card__title">Diane Holl</h3>
-                <p class="article-card__subtitle">ingénieure en sport automobile</p>
-              </div>
+      <div class="articles__list">
+        <!-- Card 1 -->
+        <article class="article-card" tabindex="0">
+          <div class="article-card__media">
+            <img src="/assets/img/dianeholl_article1.webp" alt="Diane Holl, ingénieure dans le sport automobile" />
+            <div class="article-card__overlay"></div>
+            <div class="article-card__content">
+              <h3 class="article-card__title">Diane Holl</h3>
+              <p class="article-card__subtitle">Ingénieure en sport automobile</p>
+              <p class="article-card__intro">
+                Portrait d’une ingénieure qui a marqué la F1 par son expertise et son parcours inspirant.
+              </p>
             </div>
-          </article>
+          </div>
+        </article>
 
-          <img src="/assets/icones/separateur.svg" alt="Séparateur décoratif" class="article-separator" />
+        <img src="/assets/icones/separateur.svg" alt="Séparateur décoratif" class="article-separator" />
 
-          <article class="article-card">
-            <div class="article-card__media">
-              <img src="/assets/img/f1academy_article2.webp" alt="Pilotes de la F1 Academy" />
-              <div class="article-card__overlay"></div>
-              <div class="article-card__content">
-                <h3 class="article-card__title">F1 Academy</h3>
-                <p class="article-card__subtitle">Série de la relève féminine dans le sport automobile</p>
-              </div>
+        <!-- Card 2 -->
+        <article class="article-card" tabindex="0">
+          <div class="article-card__media">
+            <img src="/assets/img/f1academy_article2.webp" alt="Pilotes de la F1 Academy" />
+            <div class="article-card__overlay"></div>
+            <div class="article-card__content">
+              <h3 class="article-card__title">F1 Academy</h3>
+              <p class="article-card__subtitle">La relève féminine du sport auto</p>
+              <p class="article-card__intro">
+                Une filière pensée pour révéler et accompagner la nouvelle génération de pilotes.
+              </p>
             </div>
-          </article>
+          </div>
+        </article>
 
-          <img src="/assets/icones/separateur.svg" alt="Séparateur décoratif" class="article-separator" />
+        <img src="/assets/icones/separateur.svg" alt="Séparateur décoratif" class="article-separator" />
 
-          <article class="article-card">
-            <div class="article-card__media">
-              <img src="/assets/img/stereotype_book.webp" alt="Livre Sexe et stéréotypes de genre dans les médias" />
-              <div class="article-card__overlay"></div>
-              <div class="article-card__content">
-                <h3 class="article-card__title">stéréotypes & médias</h3>
-                <p class="article-card__subtitle">Livre sur les stéréotypes de genre dans les médias</p>
-              </div>
+        <!-- Card 3 -->
+        <article class="article-card" tabindex="0">
+          <div class="article-card__media">
+            <img src="/assets/img/stereotype_book.webp" alt="Livre Sexe et stéréotypes de genre dans les médias" />
+            <div class="article-card__overlay"></div>
+            <div class="article-card__content">
+              <h3 class="article-card__title">Stéréotypes & Médias</h3>
+              <p class="article-card__subtitle">Regards critiques</p>
+              <p class="article-card__intro">
+                Comment les représentations médiatiques façonnent et perpétuent les biais de genre.
+              </p>
             </div>
-          </article>
-        </div>
+          </div>
+        </article>
+         <img src="/assets/icones/separateur.svg" alt="Séparateur décoratif" class="article-separator" />
       </div>
     </div>
-  </section>
+  </div>
+</section>
+<section class="newsletter" id="newsletter">
+  <div class="newsletter__inner">
+    <form class="newsletter__form" novalidate>
+      <label for="nl-email" class="sr-only">Votre adresse mail</label>
 
+      <div class="newsletter__field">
+        <input
+          type="email"
+          id="nl-email"
+          class="newsletter__input"
+          placeholder="Votre adresse mail"
+          required
+          autocomplete="email"
+        />
+      </div>
 
+      <button type="submit" class="newsletter__btn">Envoyer</button>
+    </form>
+
+    <p class="newsletter__msg" role="status" aria-live="polite"></p>
+  </div>
+</section>
+<section class="footer">
+  <div class="footer__inner">
+
+    <!-- Liens du haut -->
+    <nav class="footer__links">
+      <a href="/fr/a_propos.html">A propos</a>
+      <a href="/fr/termes.html">Termes et conditions</a>
+      <a href="/fr/donnees_privees.html">Données privées</a>
+    </nav>
+
+    <!-- Icônes réseaux sociaux -->
+    <div class="footer__socials">
+      <a href="#" aria-label="Facebook">
+        <img src="/assets/icones/Facebook-Icon.svg" alt="facebook icone">
+      </a>
+      <a href="#" aria-label="Twitter">
+        <img src="/assets/icones/Twitter-Icon.svg" alt="twitter icone">
+      </a>
+      <a href="#" aria-label="YouTube">
+        <img src="/assets/icones/Youtube-Icon.svg" alt="youtube icone">
+      </a>
+      <a href="#" aria-label="LinkedIn">
+        <img src="/assets/icones/LinkedIn.svg" alt="linkedin icone">
+      </a>
+    </div>
+
+    <!-- Ligne séparatrice -->
+    <div class="footer__separator"></div>
+
+    <!-- Bas du footer -->
+    <div class="footer__legal">
+      <p>@ 2025 Lorems</p>
+      <p>Tous droits réservés</p>
+      <p>GEISS Solène C1</p>
+    </div>
+
+  </div>
+</section>
 </body>
 </html>

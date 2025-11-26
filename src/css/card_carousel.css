@@ -1,0 +1,117 @@
+/* ===== CAROUSEL Effet Matilda ===== */
+.effet_matilda-carousel {
+  padding: 22px 16px 40px;
+  background: #fff;
+  color: #2F2A44;
+}
+
+.effet_matilda-carousel__inner {
+  max-width: 460px;
+  margin: 0 auto;
+}
+
+/* Titre section */
+.effet_matilda-carousel__heading {
+font-size: 20px;
+  margin: 14px 0 20px;
+  font-family: "Oi", cursive;
+  font-weight: 400;
+  font-size: clamp(28px, 7.4vw, 40px);
+  line-height: 1.08;
+  letter-spacing: .4px;
+  color: #2F2A44;
+}
+
+/* Viewport + piste */
+.effet_matilda-carousel__viewport {
+  position: relative;
+  isolation: isolate;
+}
+
+.effet_matilda-carousel__track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+  gap: 18px;
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+}
+.effet_matilda-carousel__track::-webkit-scrollbar { display: none; }
+
+/* Carte violette */
+.effet_matilda-card {
+  scroll-snap-align: center;
+  background: #2F2A44;               /* violet foncé */
+  border-radius: 28px;
+  padding: 20px 16px 22px;
+  color: #EBE2F3;                     /* violet clair pour le texte */
+  box-shadow: 0 10px 30px rgba(47,42,68,.25);
+  position: relative;
+}
+
+/* Titre de la carte */
+.effet_matilda-card__title {
+    font-size: 20px;
+  margin: 0 8px 10px;
+  font-family: "Oi", cursive;
+  font-weight: 400;
+  font-size: clamp(22px, 6.3vw, 30px);
+  line-height: 1.05;
+  color: #EBE2F3;
+}
+
+/* Ligne fine */
+.effet_matilda-card__rule {
+  height: 2px;
+  margin: 6px 8px 14px;
+  background: rgba(235,226,243,.8);
+  border-radius: 2px;
+}
+
+/* Image avec coin arrondi + bordure claire */
+.effet_matilda-card__figure {
+  margin: 0;
+  padding: 10px;
+  border-radius: 22px;
+  background: rgba(235,226,243,.08);
+  box-shadow: inset 0 0 0 2px rgba(201,167,228,.6);
+}
+
+.effet_matilda-card__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.25);
+}
+
+/* Flèches */
+.effet_matilda-carousel__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 34px;
+  height: 34px;
+  border: none;
+  background: rgba(255,255,255,.85);
+  border-radius: 999px;
+  box-shadow: 0 6px 16px rgba(47,42,68,.22);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.effet_matilda-carousel__arrow img { width: 18px; height: 18px; }
+
+.effet_matilda-carousel__arrow--prev { left: -6px; }
+.effet_matilda-carousel__arrow--next { right: -6px; }
+
+/* Desktop : un peu plus large et centré */
+@media (min-width: 640px){
+  .effet_matilda-carousel__inner { max-width: 560px; }
+  .effet_matilda-card { padding: 22px 20px 24px; }
+}

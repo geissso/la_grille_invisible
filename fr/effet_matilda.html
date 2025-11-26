@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Effet Matilda - LA GRILLE INVISIBLE</title>
+
+  <link rel="stylesheet" href="/src/style.css">
+  <script src="/src/script.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Oi&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Oi&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <a href="/fr/" class="logo-link">
+      <img src="/assets/icones/LOGO.svg" alt="Logo">
+    </a>
+
+    <div class="header-right">
+      <a href="/en/" class="lang-link">EN</a>
+
+      <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav">
+        <img src="/assets/icones/menu.svg" alt="Menu-icone">
+      </button>
+
+      <nav class="header__menu menu" id="mainNav" aria-hidden="true">
+        <ul class="menu__list list-unstyled">
+          <li class="menu__item"><a class="menu__link" href="/fr/a_propos.html">A propos</a></li>
+          <li class="menu__item"><a class="menu__link" href="/fr/effet_matilda.html">Effet Matilda</a></li>
+          <li class="menu__item"><a class="menu__link" href="/fr/diane_holl.html">Diane Holl</a></li>
+          <li class="menu__item"><a class="menu__link" href="/fr/f1_academy.html">F1 Academy</a></li>
+          <li class="menu__item"><a class="menu__link" href="/fr/stereotype.html">Stéréotypes & Médias</a></li>
+          <li class="menu__item"><a class="menu__link" href="/fr/theorie.html">Une théorie</a></li>
+          <li class="menu__item"><a class="menu__link" href="/fr/films_series.html">Films/ Séries</a></li>
+          <li class="menu__item"><a class="menu__link" href="/fr/contacter.html">Nous Contacter</a></li>
+          <li class="menu__item"><a class="menu__link" href="/fr/glossaire.html">Glossaire</a></li>
+          <li class="menu__item"><a class="menu__link" href="/fr/autres_projets.html">Autres Projets</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="effet_matilda-hero" style="--hero-img: url('/assets/img/effetmatilda_back.webp');">
+
+  <a class="effet_matilda-hero__back" href="/fr/">
+    <img src="/assets/icones/arrow_left_white.svg" alt="Retour">
+  </a>
+
+  <div class="effet_matilda-hero__overlay"></div>
+
+  <div class="effet_matilda-hero__content">
+    <h1 class="effet_matilda-hero__title">
+      L'EFFET MATILDA
+    </h1>
+  </div>
+
+  <div class="effet_matilda-hero__bottom-cap">
+    <div class="effet_matilda-hero__bottom-cap-inner"></div>
+  </div>
+</section>
+<section class="effet_matilda-intro" aria-labelledby="effet_matilda-intro-title">
+  <div class="effet_matilda-intro__inner">
+
+    <!-- Label + étoile -->
+    <div class="effet_matilda-intro__labelrow">
+      <span class="effet_matilda-intro__star" aria-hidden="true">
+        <!-- petite étoile inline pour éviter une dépendance d’asset -->
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="#c9a7e4" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2l2.6 6.9 7.4.6-5.6 4.4 1.8 7.1L12 17.8 5.8 21l1.8-7.1L2 9.5l7.4-.6L12 2z"/>
+        </svg>
+      </span>
+      <span class="effet_matilda-intro__label">EFFET MATILDA</span>
+    </div>
+
+    <div class="effet_matilda-intro__rule" role="presentation"></div>
+
+    <!-- Titre -->
+    <h2 class="effet_matilda-intro__title" id="effet_matilda-intro-title">
+      qu’est-ce que l’effet<br/> Matilda&nbsp;?
+    </h2>
+
+    <!-- Texte -->
+    <div class="effet_matilda-intro__content">
+      <p>
+        <strong>L’effet Matilda</strong> désigne un phénomène bien réel&nbsp;: les découvertes
+        faites par des femmes sont souvent attribuées à leurs collègues masculins.
+        Le terme vient de Matilda Joslyn Gage, une féministe américaine du XIX<sup>e</sup> siècle,
+        qui dénonçait déjà cette invisibilisation.
+      </p>
+
+      <p>
+        De Rosalind Franklin, éclipsée dans la découverte de l’ADN, à
+        <strong>Jocelyn Bell Burnell</strong>, privée du Nobel pour la découverte des pulsars,
+        de nombreuses scientifiques ont vu leur travail minimisé ou effacé.
+      </p>
+
+      <p>
+        Cet effet n’est pas seulement historique — il persiste encore aujourd’hui, dans les laboratoires,
+        les médias et les manuels scolaires. Le nom de l’homme est cité, celui de la femme est oublié.
+        Reconnaître <strong>l’effet Matilda</strong>, c’est rétablir la vérité et rendre justice aux femmes
+        qui ont façonné la science, souvent dans l’ombre.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<div class="effet_matilda-intro__rule" role="presentation"></div>
+
+<section class="effet_matilda-carousel" aria-labelledby="effet_matilda-carousel-heading">
+  <div class="effet_matilda-carousel__inner">
+
+    <!-- Titre de section -->
+    <h2 class="effet_matilda-carousel__heading" id="effet_matilda-carousel-heading">
+      Des femmes éclipsées<br>par l’histoire
+    </h2>
+
+    <!-- Piste du carrousel -->
+    <div class="effet_matilda-carousel__viewport" role="region" aria-roledescription="carousel" aria-label="Femmes scientifiques">
+      <div class="effet_matilda-carousel__track">
+
+        <!-- Slide 1 -->
+        <article class="effet_matilda-card" aria-roledescription="slide">
+          <h3 class="effet_matilda-card__title">Rosalind Franklin<br>et l’ADN</h3>
+          <div class="effet_matilda-card__rule"></div>
+
+          <figure class="effet_matilda-card__figure">
+            <img
+              class="effet_matilda-card__img"
+              src="/assets/img/carrousel_1_effet.webp"
+              alt="Portrait de Rosalind Franklin"
+            />
+          </figure>
+        </article>
+
+        <!-- Slide 2 -->
+        <article class="effet_matilda-card" aria-roledescription="slide">
+          <h3 class="effet_matilda-card__title">Jocelyn Bell<br>Burnell</h3>
+          <div class="effet_matilda-card__rule"></div>
+
+          <figure class="effet_matilda-card__figure">
+            <img
+              class="effet_matilda-card__img"
+              src="/assets/img/carrousel_2_effet.webp"
+              alt="Portrait de Jocelyn Bell Burnell"
+            />
+          </figure>
+        </article>
+
+        <!-- Slide 3 -->
+        <article class="effet_matilda-card" aria-roledescription="slide">
+          <h3 class="effet_matilda-card__title">Lise Meitner<br>et la fission</h3>
+          <div class="effet_matilda-card__rule"></div>
+
+          <figure class="effet_matilda-card__figure">
+            <img
+              class="effet_matilda-card__img"
+              src="/assets/img/carrousel_3_effet.webp"
+              alt="Portrait de Lise Meitner"
+            />
+          </figure>
+        </article>
+
+        <!-- Slide 4 -->
+        <article class="effet_matilda-card" aria-roledescription="slide">
+          <h3 class="effet_matilda-card__title">Chien-Shiung Wu</h3>
+          <div class="effet_matilda-card__rule"></div>
+
+          <figure class="effet_matilda-card__figure">
+            <img
+              class="effet_matilda-card__img"
+              src="/assets/img/carrousel_3_effet.webp"
+              alt="Portrait de Chien-Shiung Wu"
+            />
+          </figure>
+        </article>
+
+      </div>
+
+      <!-- Flèches -->
+      <button class="effet_matilda-carousel__arrow effet_matilda-carousel__arrow--prev" aria-label="Précédent">
+        <img src="/assets/icones/arrow_left.svg" alt="" aria-hidden="true">
+      </button>
+      <button class="effet_matilda-carousel__arrow effet_matilda-carousel__arrow--next" aria-label="Suivant">
+        <img src="/assets/icones/arrow_right.svg" alt="" aria-hidden="true">
+      </button>
+    </div>
+
+  </div>
+</section>
+<section class="effet_matilda-timeline" aria-labelledby="effet_matilda-tl-title">
+  <div class="effet_matilda-tl__header">
+    <div class="effet_matilda-tl__label">
+      <h2 class="effet_matilda-tl__title" id="effet_matilda-tl-title">
+        Quelques dates clés
+      </h2>
+    </div>
+</div>
+
+  <!-- CORPS DE LA TIMELINE -->
+  <div class="effet_matilda-tl__body">
+    <ol class="effet_matilda-tl">
+
+      <!-- ITEM 1 -->
+      <li class="effet_matilda-tl__item">
+        <div class="effet_matilda-tl__left">
+          <div class="effet_matilda-tl__year">1826</div>
+          <div class="effet_matilda-tl__tick"></div>
+        </div>
+
+        <div class="effet_matilda-tl__card">
+          <div class="effet_matilda-tl__arrow">
+            <svg viewBox="0 0 48 24" fill="none">
+              <path d="M2 12h36m0 0l-6-6m6 6l-6 6" stroke="#EBE2F3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+
+          <img class="effet_matilda-tl__photo" src="/assets/img/timeline1.webp" alt="Matilda Joslyn Gage">
+
+          <h3 class="effet_matilda-tl__name">
+            Matilda Joslyn Gage<br><span>(1826–1898)</span>
+          </h3>
+
+          <p class="effet_matilda-tl__role">
+            <strong>Rôle :</strong> Militante féministe et écrivaine américaine.
+          </p>
+
+          <p class="effet_matilda-tl__fact">
+            <strong>Fait marquant :</strong> À l’origine du concept, dès la fin du XIXᵉ siècle ; elle dénonce l’effacement des femmes dans l’histoire, notamment en science.
+          </p>
+        </div>
+      </li>
+
+      <!-- ITEM 2 -->
+      <li class="effet_matilda-tl__item">
+        <div class="effet_matilda-tl__left">
+          <div class="effet_matilda-tl__year">1878</div>
+          <div class="effet_matilda-tl__tick"></div>
+        </div>
+
+        <div class="effet_matilda-tl__card">
+          <div class="effet_matilda-tl__arrow">
+            <svg viewBox="0 0 48 24" fill="none">
+              <path d="M2 12h36m0 0l-6-6m6 6l-6 6" stroke="#EBE2F3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+
+          <img class="effet_matilda-tl__photo" src="/assets/img/timeline2.webp" alt="Lise Meitner">
+
+          <h3 class="effet_matilda-tl__name">
+            Lise Meitner<br><span>(1878–1968)</span>
+          </h3>
+
+          <p class="effet_matilda-tl__role">
+            <strong>Rôle :</strong> Physicienne austro-suédoise.
+          </p>
+
+          <p class="effet_matilda-tl__fact">
+            <strong>Fait marquant :</strong> Co-découvre la fission nucléaire mais ne reçoit jamais le Nobel.
+          </p>
+        </div>
+      </li>
+
+      <!-- ITEM 3 -->
+      <li class="effet_matilda-tl__item">
+        <div class="effet_matilda-tl__left">
+          <div class="effet_matilda-tl__year">1912</div>
+          <div class="effet_matilda-tl__tick"></div>
+        </div>
+
+        <div class="effet_matilda-tl__card">
+          <div class="effet_matilda-tl__arrow">
+            <svg viewBox="0 0 48 24" fill="none">
+              <path d="M2 12h36m0 0l-6-6m6 6l-6 6" stroke="#EBE2F3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+
+          <img class="effet_matilda-tl__photo" src="/assets/img/timeline3.webp" alt="Chien-Shiung Wu">
+
+          <h3 class="effet_matilda-tl__name">
+            Chien-Shiung Wu<br><span>(1912–1997)</span>
+          </h3>
+
+          <p class="effet_matilda-tl__role">
+            <strong>Rôle :</strong> Physicienne sino-américaine.
+          </p>
+
+          <p class="effet_matilda-tl__fact">
+            <strong>Fait marquant :</strong> Démontre la non-conservation de la parité — découverte majeure.
+          </p>
+        </div>
+      </li>
+
+      <!-- ITEM 4 -->
+      <li class="effet_matilda-tl__item">
+        <div class="effet_matilda-tl__left">
+          <div class="effet_matilda-tl__year">1918</div>
+          <div class="effet_matilda-tl__tick"></div>
+        </div>
+
+        <div class="effet_matilda-tl__card">
+          <div class="effet_matilda-tl__arrow">
+            <svg viewBox="0 0 48 24" fill="none">
+              <path d="M2 12h36m0 0l-6-6m6 6l-6 6" stroke="#EBE2F3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+
+          <img class="effet_matilda-tl__photo" src="/assets/img/timeline4.webp" alt="Katherine Johnson">
+
+          <h3 class="effet_matilda-tl__name">
+            Katherine Johnson<br><span>(1918–2020)</span>
+          </h3>
+
+          <p class="effet_matilda-tl__role">
+            <strong>Rôle :</strong> Mathématicienne à la NASA.
+          </p>
+
+          <p class="effet_matilda-tl__fact">
+            <strong>Fait marquant :</strong> Calcule les trajectoires des premières missions spatiales.
+          </p>
+        </div>
+      </li>
+
+      <!-- ITEM 5 -->
+      <li class="effet_matilda-tl__item">
+        <div class="effet_matilda-tl__left">
+          <div class="effet_matilda-tl__year">1920</div>
+          <div class="effet_matilda-tl__tick"></div>
+        </div>
+
+        <div class="effet_matilda-tl__card">
+          <div class="effet_matilda-tl__arrow">
+            <svg viewBox="0 0 48 24" fill="none">
+              <path d="M2 12h36m0 0l-6-6m6 6l-6 6" stroke="#EBE2F3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+
+          <img class="effet_matilda-tl__photo" src="/assets/img/timeline5.webp" alt="Rosalind Franklin">
+
+          <h3 class="effet_matilda-tl__name">
+            Rosalind Franklin<br><span>(1920–1958)</span>
+          </h3>
+
+          <p class="effet_matilda-tl__role">
+            <strong>Rôle :</strong> Biophysicienne britannique.
+          </p>
+
+          <p class="effet_matilda-tl__fact">
+            <strong>Fait marquant :</strong> Ses travaux sur l’ADN sont déterminants.
+          </p>
+        </div>
+      </li>
+
+      <!-- ITEM 6 -->
+      <li class="effet_matilda-tl__item">
+        <div class="effet_matilda-tl__left">
+          <div class="effet_matilda-tl__year">1943</div>
+          <div class="effet_matilda-tl__tick"></div>
+        </div>
+
+        <div class="effet_matilda-tl__card">
+          <div class="effet_matilda-tl__arrow">
+            <svg viewBox="0 0 48 24" fill="none">
+              <path d="M2 12h36m0 0l-6-6m6 6l-6 6" stroke="#EBE2F3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+
+          <img class="effet_matilda-tl__photo" src="/assets/img/timeline6.webp" alt="Jocelyn Bell Burnell">
+
+          <h3 class="effet_matilda-tl__name">
+            Jocelyn Bell Burnell<br><span>(1943– )</span>
+          </h3>
+
+          <p class="effet_matilda-tl__role">
+            <strong>Rôle :</strong> Astrophysicienne nord-irlandaise.
+          </p>
+
+          <p class="effet_matilda-tl__fact">
+            <strong>Fait marquant :</strong> Découvre les pulsars — mais le Nobel va à ses superviseurs.
+          </p>
+        </div>
+      </li>
+
+    </ol>
+  </div>
+
+</section>
